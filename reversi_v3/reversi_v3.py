@@ -94,6 +94,8 @@ def vakjes(x:int, y:int) -> None:
 
 
 #invoer van speler in de vakjes functie zetten(WIP)
+coords = [[(y,x) for x in range(lengte)] for y in range(breedte)]
+
 vakjes(12, 12)
 
 #tekst van wie de winnar is of remise(WIP)
