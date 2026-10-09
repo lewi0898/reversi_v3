@@ -97,6 +97,9 @@ def vakjes(x:int, y:int) -> None:
 def coords():
     xcoord = int(rij.get())
     ycoord = int(kolom.get())
+    #nog een error bericht toevoegen
+    if xcoord%2 == 1 or ycoord%2 == 1:
+        break
     vakjes(xcoord, ycoord)
     global foto
     foto = PhotoImage(plaatje)
