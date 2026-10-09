@@ -2,7 +2,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{9f0fd36d-0198-ce80-4260-ceaa608085a2}</ProjectGuid>
+    <ProjectGuid>{58283398-b05d-4dd4-aebe-3eb4d1984174}</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <StartupFile>reversi_v3.py</StartupFile>
     <SearchPath>

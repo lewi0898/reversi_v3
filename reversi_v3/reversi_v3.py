@@ -72,10 +72,10 @@ draw.ellipse(((10, 43), (20, 53)), fill = "blue")
 uitkomst.configure(width = 18, text = "", background = "white")
 
 #rand van spelbord(spelbord altijd even groot)
-draw.rectangle(((90, 100), (400, 400)), fill = "white", outline = "black")
 
 #vakjes(moet een functie worden omdat de speler de bord grootte kan kiezen)
 def vakjes(x:int, y:int) -> None:
+    draw.rectangle(((90, 100), (400, 400)), fill = "white", outline = "black")
     t = 0
     n = 0
     k = 310/x
@@ -94,9 +94,17 @@ def vakjes(x:int, y:int) -> None:
 
 
 #invoer van speler in de vakjes functie zetten(WIP)
-coords = [[(y,x) for x in range(lengte)] for y in range(breedte)]
+def coords():
+    xcoord = int(rij.get())
+    ycoord = int(kolom.get())
+    vakjes(xcoord, ycoord)
+    global foto
+    foto = PhotoImage(plaatje)
+    afbeelding.configure(image=foto)
 
-vakjes(12, 12)
+#coords = [[(y,x) for x in range(lengte)] for y in range(breedte)]
+
+vakjes(6,6)
 
 #tekst van wie de winnar is of remise(WIP)
 def uitkomst() -> None:
@@ -112,6 +120,7 @@ def uitkomst() -> None:
         uitkomst.configure(text = "de game is geëindigd remise")
 
 
+maak.configure(command = coords)
 foto = PhotoImage(plaatje)
 afbeelding.configure(image=foto)
 scherm.mainloop()
