@@ -107,7 +107,7 @@ def uitkomst() -> None:
     elif blauw == winner:
         uitkomst.configure(text = "blauw heeft gewonnen")
     else:
-        uitkomst.configure(text = "de game is een remise")
+        uitkomst.configure(text = "de game is geëindigd remise")
 
 
 foto = PhotoImage(plaatje)
